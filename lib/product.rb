@@ -31,15 +31,22 @@ class Product
 	end
 
     def self.in_stock
-    	@@products.each do |value|
+    	stock_array = []
+    	@@products.each_with_index do |value,index|
     		if value.stock > 0
-    			count+ =1 
-    			stock[count] = value
+    			stock_array[index] = value
     		end
     	end
-    	return stock[]
+    	return stock_array
     end
 
+    def include?(product_name)
+    	if @title == product_name
+    		return true
+    	else
+    		return false
+    	end
+    end
 
 	private
 
