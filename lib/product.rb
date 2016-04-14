@@ -30,6 +30,17 @@ class Product
 		end
 	end
 
+    def self.in_stock
+    	@@products.each do |value|
+    		if value.stock > 0
+    			count+ =1 
+    			stock[count] = value
+    		end
+    	end
+    	return stock[]
+    end
+
+
 	private
 
 	def add_to_products
